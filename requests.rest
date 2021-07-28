@@ -1,11 +1,33 @@
 GET http://localhost:5000/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUnVuZ2tyaXQiLCJpYXQiOjE2Mjc0NTgxMjQsImV4cCI6MTYyNzQ1ODEzOX0.dj68THF6XAlW4Vju70rA01cryIyvi6egCGWkj6YgoOY
+
 
 
 ### 
+POST http://localhost:4000/token
+Content-Type: application/x-www-form-urlencoded
 
-POST http://localhost:5000/login
+###
+POST http://localhost:4000/login
 Content-Type: application/json
 
 {
     "username": "Rungkrit"
 }
+
+
+###
+
+POST  http://203.146.249.240:9080/api/device/sendInstruct 
+content-type: application/x-www-form-urlencoded
+
+{
+    "imei" : "353376110046148", 
+    "cmdContent": "FILELIST",
+    "serverFlagId": "0",
+    "proNo": "128",
+    "platform": "web",
+    "requestId": "6",
+    "cmdType": "normallins"
+}
+
